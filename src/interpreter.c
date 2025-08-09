@@ -19,7 +19,7 @@ int interpreter_size(char *argv)
             printf("out-of-bounds error");
             return -1;
         }
-    return size;
+    return size + 1;
 }
 
 int *init_interpreter(int size, int *ptr)
@@ -73,5 +73,6 @@ int intepreter(char *argv)
         interpreter_rules(argv, &cursor, &i , ptr);
         i++;
     }
+    free(ptr);
     return 0;
 }

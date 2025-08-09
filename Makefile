@@ -16,7 +16,7 @@ ifeq ($(OS),Windows_NT)
     # L'exécutable aura l'extension .exe sur Windows
     PROGRAM_NAME = $(PROGRAM_NAME_BASE).exe
     # Supprime le flag -fPIC car il n'est pas toujours nécessaire ou peut causer des problèmes sur Windows pour les exécutables simples
-    CFLAGS = -Wall -c -I$(INCLUDE_DIR)
+    CFLAGS = -Wall -c -I$(INCLUDE_DIR) -g
     # Options de liaison spécifiques à Windows si nécessaire (ex: -lws2_32 pour les sockets)
     LDFLAGS =
 else
