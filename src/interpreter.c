@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//oui
 int interpreter_size(char *argv)
 {
     int size = 0;

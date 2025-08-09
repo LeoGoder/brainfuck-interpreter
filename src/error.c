@@ -1,3 +1,4 @@
+#include <string.h>
 #include "error.h"
 
 int error_nb_input_handler(int argc)
