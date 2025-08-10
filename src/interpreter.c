@@ -46,6 +46,8 @@ void    interpreter_rules(char *argv, int *cursor, int *i, int *ptr)
         ptr[*cursor]--;
     if (argv[*i] == '.')
         putchar(ptr[*cursor]);
+    if (argv[*i] == ',')
+        ptr[*cursor] = getchar();
     if (argv[*i] == '[')
         temp = *i;
     if (argv[*i] == ']')
