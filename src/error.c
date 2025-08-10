@@ -10,33 +10,18 @@ int error_nb_input_handler(int argc)
 }
 
 // verif que fichier est un .bf
-int check_if_file_bf(char *argv)
+int check_if_file_bf(char *filename)
 {
-    int i = 0;
-    char *bf = ".bf";
-    int y;
-    int len;
-    int found = 0;
+    int len_filename = strlen(filename);
+    int len_extension = 3; 
 
-    while (argv[i])
-    {
-        if (argv[i] == '.')
-        {
-            y = 0;
-            while (bf[y])
-            {
-                if (argv[i + y] == bf[y])
-                    len++;
-                y++;
-            }
-            if (len != y)
-            {
-                printf("file extensions not good ");
-                return 1;
-            }
-        }
-        i++;
+    if (len_filename < len_extension) {
+        printf("Nom de fichier trop court.\n");
+        return 1;
     }
-    return 0;
+    if (strcmp(filename + len_filename - len_extension, ".bf") == 0) {
+        return 2;
+    } 
+    return 1;
 }
 // verif que l'input ne contient aucun char indesirable

@@ -30,7 +30,6 @@ int *init_interpreter(int size, int *ptr)
         ptr[i] = 0;
         i++;
     }
-    
     return ptr;
 }
 
